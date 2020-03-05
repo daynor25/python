@@ -70,10 +70,3 @@ def bin_a_dec(a1):
  return binario   
     
 print("num.conv.binario: ", bin_a_dec(a1) ) 
-
-#CONVERSION DE DECIMAL A OCTAL
-dec=int(input("introducce un numero a convertir: "))
-def dec_oct(dec):
-  return oct(dec)
-
-print("su equivalente a octal es: ",dec_oct(dec))
