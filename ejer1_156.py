@@ -15,10 +15,10 @@ A=float(input("ingrese un numero\n"))
 B=float(input("ingrese el segundo numero\n"))
 C=float(input("ingrese el tercer numero\n"))
 def max_tres(arg1,arg2,arg3):
- if(arg1 > arg2 and arg1 > arg3):
+ if(arg1 >= arg2 and arg1 >= arg3):
     print("El numero mayor es: ", arg1)
  else:
-    if(arg2 > arg1 and arg2 > arg3):
+    if(arg2 >= arg1 and arg2 >= arg3):
        print("El numero mayor es: ", arg2)
     else:
          print("El numero mayor es: ", arg3)
@@ -70,3 +70,16 @@ def bin_a_dec(a1):
  return binario   
     
 print("num.conv.binario: ", bin_a_dec(a1) ) 
+
+#CONVERSION DE DECIMAL A OCTAL
+import math
+num = int(input("ingrese el numero decimal: "))
+
+def conv_dec_oct(num):
+    octal = ''
+    while num!=0:
+        octal = str(num%8) + octal
+        num = int(math.floor(num / 8))
+    return(octal)
+
+print("numero convertido em base 8:  ", conv_dec_oct(num))
